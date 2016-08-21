@@ -21,7 +21,7 @@ cp /Users/javinor/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Pr
 ```bash
 brew tap caskroom/fonts
 brew cask install font-inconsolata
-```bash
+```
 
 or download from here: https://fonts.google.com/specimen/Inconsolata
 
