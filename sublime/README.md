@@ -8,12 +8,12 @@ Copy installation script to sublime terminal `ctrl+{backtick}` from https://pack
 
 Restore:
 ``` bash
-cp Preferences.sublime-settings /Users/javinor/Library/Application Support/Sublime Text 3/Packages/User/
+cp Preferences.sublime-settings /Users/javinor/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/
 ```
 
 Save:
 ``` bash
-cp /Users/javinor/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings .
+cp /Users/javinor/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Preferences.sublime-settings .
 ```
 
 ## Inconsolata Font
