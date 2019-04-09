@@ -1,0 +1,10 @@
+[branch]
+	autosetuprebase = always
+
+[github]
+	user = javinor
+
+[user]
+	name = javinor
+	email = javinor@gmail.com
+

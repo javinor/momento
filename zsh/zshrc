@@ -1,0 +1,48 @@
+ZSH_THEME="robbyrussell"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+HIST_STAMPS="yyyy-mm-dd"
+
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+# export NVM_LAZY_LOAD=true
+
+fpath=(/usr/local/share/zsh-completions $fpath)
+
+
+# Load the shell dotfiles
+for file in $(dirname ${(%):-%x})/.{shell_exports,shell_aliases}; do
+  [ -r "$file" ] && [ -f "$file" ] && source "$file";
+done
+unset file
+
+
+# this is where completion and history will be saved
+if [[ ! -d "$XDG_CACHE_HOME/zsh" ]]; then
+  mkdir -p $XDG_CACHE_HOME/zsh
+fi
+
+# zgen {{{
+
+if [[ ! -f $XDG_CACHE_HOME/zgen/zgen.zsh ]]; then
+  git clone https://github.com/tarjoilija/zgen.git "${XDG_CACHE_HOME}/zgen"
+fi
+
+ZGEN_DIR=${XDG_CACHE_HOME}/zgen.repos
+. $XDG_CACHE_HOME/zgen/zgen.zsh
+
+if ! zgen saved; then
+  # Load oh-my-zsh
+  zgen oh-my-zsh
+
+  zgen load lukechilds/zsh-nvm
+
+  zgen save
+fi
+
+# }}}
+

@@ -1,0 +1,9 @@
+#!/usr/bin/env zsh
+
+export SHELL=$(which zsh)
+
+export XDG_CONFIG_HOME=${HOME}/.config
+export XDG_CACHE_HOME=${HOME}/.cache
+
+HISTFILE=$XDG_CACHE_HOME/zsh/zsh_history
+ZGEN_CUSTOM_COMPDUMP=${XDG_CACHE_HOME}/zsh/zcompdump
